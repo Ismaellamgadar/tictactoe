@@ -72,4 +72,4 @@ jobs:
         with:
           token: ${{ secrets.GH_PAGES_TOKEN }}
           branch: main
-          folder: dist
+          folder: dist/myapp
