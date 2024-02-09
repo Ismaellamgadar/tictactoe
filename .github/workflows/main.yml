@@ -51,3 +51,25 @@ jobs:
         with:
           build: npm run build
           start: npm start
+  
+  deploy: 
+    needs: [build, test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16.13.2
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.5.0
+        with:
+          ACCESS_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
+          BRANCH: main
+          FOLDER: dist
