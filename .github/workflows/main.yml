@@ -70,7 +70,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          token: ${{ secrets.GH_PAGES_TOKEN }}
-          branch: main
-          folder: build
+          ACCESS_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
+          BRANCH: main
+          FOLDER: dist
 
