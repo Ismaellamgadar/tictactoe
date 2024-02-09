@@ -70,6 +70,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          ACCESS_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
-          BRANCH: main
-          FOLDER: dist
+          token: ${{ secrets.GH_PAGES_TOKEN }}
+          branch: main
+          folder: dist
