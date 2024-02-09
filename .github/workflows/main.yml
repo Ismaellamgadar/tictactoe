@@ -72,5 +72,5 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: dist
+          FOLDER: .
 
