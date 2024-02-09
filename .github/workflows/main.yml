@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout 🛎️
         uses: actions/checkout@v4
 
       - name: Set up Node.js
@@ -27,15 +27,15 @@ jobs:
       - name: Archive Build Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: dist
-          path: dist
+          name: build
+          path: build
   
   test:
     needs: build
     runs-on: ubuntu-latest
 
     steps: 
-      - name: Checkout Repository
+      - name: Checkout 🛎️
         uses: actions/checkout@v4
 
       - name: Set up Node.js
@@ -56,7 +56,7 @@ jobs:
     needs: [build, test]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout 🛎️
         uses: actions/checkout@v4
 
       - name: Set up Node.js
@@ -67,9 +67,10 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GH_PAGES_TOKEN }}
           branch: main
-          folder: dist/myapp
+          folder: build
+
