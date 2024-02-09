@@ -1,0 +1,42 @@
+# Compiled files
+*.compiled.js
+*.compiled.js.map
+
+# Dependencies
+/node_modules
+
+# npm lock file
+package-lock.json
+
+# Environment variables
+.env
+
+# Compiled TypeScript
+*.js
+*.js.map
+
+# NestJS specific
+.nest
+
+# Debug files
+.vscode
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# Build files
+/dist
+
+# IDE specific files
+.idea
+*.iml
+*.ipr
+*.iws
+
+# Windows
+Thumbs.db
+
+#Angular
+.angular
