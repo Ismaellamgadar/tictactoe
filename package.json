@@ -9,6 +9,7 @@
     "test": "ng test",
     "cypress": "npx cypress open"
   },
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.1.0",
