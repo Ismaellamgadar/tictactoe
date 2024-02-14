@@ -27,8 +27,8 @@ jobs:
       - name: Archive Build Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: build
-          path: build
+          name: dist
+          path: dist
   
   test:
     needs: build
@@ -66,11 +66,3 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          ACCESS_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: .
-
